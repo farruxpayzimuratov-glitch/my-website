@@ -1,10 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mening birinchi saytim</title>
+  <title>Vertex Platform</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #111827;
+      padding: 15px;
+    }
+
+    nav button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background: #1d4ed8;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Salom Dunyo 🌍</h1>
-  <p>Bu mening GitHub orqali chiqqan birinchi saytim!</p>
+
+<header>
+  🚀 Vertex Platform
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('lessons')">Darsliklar</button>
+  <button onclick="showSection('games')">O‘yinlar</button>
+  <button onclick="showSection('chat')">Chat</button>
+</nav>
+
+<section id="content">
+  <div class="card">
+    <h2>Xush kelibsiz!</h2>
+    <p>Bu Vertex platformasi. Bu yerda o‘rganish, o‘ynash va suxbat qilish mumkin.</p>
+  </div>
+</section>
+
+<script>
+  function showSection(section) {
+    let content = document.getElementById("content");
+
+    if(section === "home"){
+      content.innerHTML = 
+        <div class="card">
+          <h2>Xush kelibsiz!</h2>
+          <p>Vertex — bilim va muloqot platformasi.</p>
+        </div>
+      ;
+    }
+
+    if(section === "lessons"){
+      content.innerHTML = 
+        <div class="card">
+          <h2>Darsliklar</h2>
+          <p>Bu yerga tez orada yangi bilimlar qo‘shiladi 📚</p>
+        </div>
+      ;
+    }
+
+    if(section === "games"){
+      content.innerHTML = 
+        <div class="card">
+          <h2>O‘yinlar</h2>
+          <p>Bu yerda qiziqarli o‘yinlar bo‘ladi 🎮</p>
+        </div>
+      ;
+    }
+
+    if(section === "chat"){
+      content.innerHTML = 
+        <div class="card">
+          <h2>Chat</h2>
+          <p>Bu yerda foydalanuvchilar suxbatlashadi 💬</p>
+        </div>
+      ;
+    }
+  }
+</script>
+
 </body>
 </html>
